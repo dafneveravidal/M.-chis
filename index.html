@@ -1,87 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>M.chis</title>
-
-  <!-- Estilos -->
   <link rel="stylesheet" href="estilo.css">
-
-  <!-- Favicon (icono en la pestaña del navegador) -->
-  <link rel="icon" type="image/png" href="relojj.png">
-
-  <!-- PWA -->
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#2ecc71">
 </head>
 
 <body>
-  <!-- PANTALLA INICIO -->
-  <main class="home" id="homeScreen">
-    <button id="startBtn">Empezar</button>
-  </main>
 
-  <!-- PANTALLA CRONÓMETRO -->
-  <main class="timer hidden" id="timerScreen">
-    <h1 id="time">00:00:00</h1>
+<!-- HOME -->
+<section id="home" class="screen">
+  <nav class="top-nav">
+    <button onclick="showScreen('missions')">🎯</button>
+    <button onclick="showScreen('ranking')">🏆</button>
+    <button onclick="showScreen('tasks')">📝</button>
+    <button onclick="showScreen('done')">✅</button>
+  </nav>
 
-    <div class="controls">
-      <button id="play">▶</button>
-      <button id="pause">⏸</button>
-      <button id="stop">⏹</button>
-    </div>
-<!-- PANTALLA MISIONES -->
-<main class="missions hidden" id="missionsScreen">
-  <h2>🎯 Misiones</h2>
+  <button id="startBtn" class="btn-main">▶ Empezar</button>
+</section>
 
-  <div class="mission" id="m15">
-    <span>⏱️ Estudiar 15 minutos</span>
-    <span class="status">❌</span>
+<!-- TIMER -->
+<section id="timer" class="screen hidden">
+  <nav class="top-nav">
+    <button onclick="showScreen('missions')">🎯</button>
+    <button onclick="showScreen('ranking')">🏆</button>
+    <button onclick="showScreen('tasks')">📝</button>
+    <button onclick="showScreen('done')">✅</button>
+  </nav>
+
+  <h1 id="time">00:00</h1>
+
+  <div class="controls">
+    <button id="play">▶</button>
+    <button id="pause">⏸</button>
+    <button id="stop">⏹</button>
   </div>
+</section>
 
-  <div class="mission" id="m30">
-    <span>⏱️ Estudiar 30 minutos</span>
-    <span class="status">❌</span>
-  </div>
+<!-- TASKS -->
+<section id="tasks" class="screen hidden">
+  <nav class="top-nav">
+    <button onclick="showScreen('home')">🏠</button>
+  </nav>
 
-  <div class="mission" id="m60">
-    <span>⏱️ Estudiar 60 minutos</span>
-    <span class="status">❌</span>
-  </div>
-</main>
-<!-- PANTALLA RANKING -->
-<main class="ranking hidden" id="rankingScreen">
-  <h2>🏆 Ranking</h2>
-
-  <div class="rank-card">
-    <span>👩‍🎓 Mamichis</span>
-    <span id="myTotal">00:00:00</span>
-  </div>
-
-  <div class="rank-card">
-    <span>👩‍🎓 Compañera</span>
-    <span id="friendTotal">00:00:00</span>
-  </div>
-
-  <p id="winner"></p>
-</main>
-<!-- PANTALLA CUMPLIDAS -->
-<main class="done hidden" id="doneScreen">
-  <h2>✅ Cumplidas</h2>
-
-  <ul id="doneList">
-    <!-- Se llenará con JavaScript -->
-  </ul>
-</main>
-
-<!-- PANTALLA TAREAS -->
-<main class="tasks hidden" id="tasksScreen">
   <h2>📝 Tareas</h2>
 
-  <input type="text" id="taskName" placeholder="Ej: Estudiar matemáticas">
-
+  <input id="taskName" placeholder="Ej: Biología">
   <select id="taskTime">
     <option value="900">15 minutos</option>
     <option value="1800">30 minutos</option>
@@ -91,19 +57,47 @@
   <button id="addTask">Agregar tarea</button>
 
   <ul id="taskList"></ul>
-</main>
+</section>
 
+<!-- MISSIONS -->
+<section id="missions" class="screen hidden">
+  <nav class="top-nav">
+    <button onclick="showScreen('home')">🏠</button>
+  </nav>
 
-  </main>
-  <!-- MENÚ INFERIOR -->
-  <footer class="menu">
-    <div class="item" id="rankingBtn">🏆<span>Ranking</span></div>
-    <div class="item" id="missionsBtn">🎯<span>Misiones</span></div>
-    <div class="item" id="doneBtn">✅<span>Cumplidas</span></div>
-  </footer>
+  <h2>🎯 Misiones</h2>
+  <div id="missionsList"></div>
+</section>
 
- <script src="app.js"></script>
+<!-- RANKING -->
+<section id="ranking" class="screen hidden">
+  <nav class="top-nav">
+    <button onclick="showScreen('home')">🏠</button>
+  </nav>
 
+  <h2>🏆 Ranking</h2>
 
+  <div class="rank-card">
+    <span>👩‍🎓 Mamichis</span>
+    <span id="myTotal">00:00</span>
+  </div>
+
+  <div class="rank-card">
+    <span>👩‍🎓 Compañera</span>
+    <span id="friendTotal">01:30</span>
+  </div>
+</section>
+
+<!-- DONE -->
+<section id="done" class="screen hidden">
+  <nav class="top-nav">
+    <button onclick="showScreen('home')">🏠</button>
+  </nav>
+
+  <h2>✅ Cumplidas</h2>
+  <ul id="doneList"></ul>
+</section>
+
+<script src="app.js"></script>
 </body>
 </html>
