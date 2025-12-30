@@ -1,0 +1,15 @@
+{
+  "name": "M. chis",
+  "short_name": "Mamichistudy",
+  "start_url": "Inicio.html",
+  "display": "standalone",
+  "background_color": "#2ecc71",
+  "theme_color": "#2ecc71",
+  "icons": [
+    {
+      "src": "relojj.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

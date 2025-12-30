@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: #2ecc71;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#startBtn {
+  padding: 20px 40px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 67px;
+  background-color: white;
+  color: #2ecc71;
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.menu .item {
+  color: white;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.timer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+#time {
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+.controls button {
+  font-size: 1.5rem;
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.missions {
+  flex: 1;
+  padding: 20px;
+  color: white;
+}
+
+.missions h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.mission {
+  background: rgba(255,255,255,0.2);
+  border-radius: 15px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.mission.completed {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.status {
+  font-size: 1.4rem;
+}
+
+.ranking {
+  flex: 5;
+  padding: 30px;
+  color: white;
+  text-align: center;
+}
+
+.rank-card {
+  background: rgba(255,255,255,0.2);
+  border-radius: 15px;
+  padding: 15px;
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+}
+
+#winner {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.done {
+  flex: 1;
+  padding: 20px;
+  color: white;
+}
+
+.done h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#doneList {
+  list-style: none;
+  padding: 0;
+}
+
+#doneList li {
+  background: rgba(255,255,255,0.2);
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.tasks {
+  flex: 1;
+  padding: 20px;
+  color: white;
+}
+
+.tasks input,
+.tasks select,
+.tasks button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+#taskList {
+  list-style: none;
+  padding: 0;
+}
+
+#taskList li {
+  background: rgba(255,255,255,0.2);
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
