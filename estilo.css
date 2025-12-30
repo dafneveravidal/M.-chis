@@ -1,8 +1,8 @@
 * {
-  margin: 0;
-  padding: 0;
+  margin: 2px;
+  padding: 9px;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
@@ -14,7 +14,7 @@ body {
 }
 
 .home {
-  flex: 1;
+  flex: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,10 +70,15 @@ body {
   cursor: pointer;
 }
 
+
 .missions {
   flex: 1;
   padding: 20px;
   color: white;
+}
+
+.missions:hover {
+    background-color: #25985572;
 }
 
 .missions h2 {
