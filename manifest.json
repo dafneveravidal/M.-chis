@@ -1,7 +1,7 @@
 {
   "name": "M. chis",
   "short_name": "Mamichistudy",
-  "start_url": "Inicio.html",
+  "start_url": "Index.html",
   "display": "standalone",
   "background_color": "#2ecc71",
   "theme_color": "#2ecc71",
@@ -13,3 +13,4 @@
     }
   ]
 }
+
